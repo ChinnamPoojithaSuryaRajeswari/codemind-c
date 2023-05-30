@@ -16,5 +16,5 @@ int main()
             k=a[i];
         }
     }
-    printf("%d",k);
+    printf("%i",k);
 }
