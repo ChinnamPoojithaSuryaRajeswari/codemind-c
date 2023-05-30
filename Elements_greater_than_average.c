@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,s=0,k,c=0;
+    int n,t=0,s=0,p,i;
     scanf("%d",&n);
     int a[n];
     for(i=0;i<n;i++)
@@ -12,13 +12,13 @@ int main()
     {
         s=s+a[i];
     }
-    k=s/n;
+    p=s/n;
     for(i=0;i<n;i++)
     {
-        if(a[i]<k)
+        if(a[i]>=p)
         {
-            c=c+1;
+            t=t+1;
         }
     }
-    printf("%d",n-c);
+    printf("%d",t);
 }
