@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i,j,s,c=0,l=0,k;
-    scanf("%d %d",&n,&m);
+    int n,m,i,j,s,p=0,l=0,k;
+    scanf("%d%d",&n,&m);
     int a[n][m];
     for(i=0;i<n;i++)
     {
@@ -18,15 +18,15 @@ int main()
         {
             s=s+a[i][j];
         }
-        if(s>c)
+        if(s>p)
         {
-            c=s;
+            p=s;
         }
     }
-     for(i=0;i<n;i++)
+    for(j=0;j<m;j++)
     {
         k=0;
-        for(j=0;j<m;j++)
+        for(i=0;i<n;i++)
         {
             k=k+a[i][j];
         }
@@ -35,12 +35,12 @@ int main()
             l=k;
         }
     }
-    if(c>l)
+    if(l>p)
     {
-        printf("%d",c);
+        printf("%d",l);
     }
     else
     {
-        printf("%d",l);
+        printf("%d",p);
     }
 }
