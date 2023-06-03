@@ -1,23 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i,j,k,c;
-    scanf("%d %d",&n,&m);
-    for(i=(n+m+1);i<=(n+m)*(n+m);i++)
+    int n,m,i,j,s,l,k;
+    scanf("%d%d",&n,&m);
+    l=n+m;
+    for(i=l+1;i<l*l;i++)
     {
-        c=0;
+        s=0;
         for(j=2;j<=i;j++)
         {
             if(i%j==0)
             {
-                c=c+1;
+                s=s+1;
             }
         }
-        if(c==1)
+        if(s==1)
         {
             k=i;
             break;
         }
     }
-    printf("%d",(k-(n+m)));
+    printf("%d",k-(n+m));
 }
