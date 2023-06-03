@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,c,i,j;
-    scanf("%d %d",&n,&m);
+    int n,m,s,i,j;
+    scanf("%d%d",&n,&m);
     for(i=n;i<=m;i++)
     {
-        c=0;
+        s=0;
         for(j=2;j<=i;j++)
         {
             if(i%j==0)
             {
-                c=c+1;
+                s=s+1;
             }
         }
-        if(c==1)
+        if(s==1)
         {
             printf("%d
 ",i);
