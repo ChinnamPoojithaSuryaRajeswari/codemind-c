@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int n,k,i,r,s,p,q;
+    scanf("%d",&n);
+    for(i=n+1;i<=n*n;i++)
+    {
+        k=i;
+        s=0;
+        while(k!=0)
+        {
+            r=k%10;
+            s=s*10+r;
+            k=k/10;
+        }
+        if(s==i)
+        {
+            p=0;
+            for(q=2;q<=i;q++)
+            {
+               if(i%q==0)
+               {
+                   p=p+1;
+               }
+            }
+            if(p==1)
+            {
+                printf("%d",i);
+                break;
+            }
+        }
+    }
+}
